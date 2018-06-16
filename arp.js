@@ -388,8 +388,8 @@ function getMIB (nodeName, date, time) {
 
     let suminpktU = 0
     let suminpktsErr = 0
-    for (let i = 60; i <= 62; i++) {
-      if(i === 60 || i === 62 ){
+    for (let i = 59; i <= 61; i++) {
+      if(i === 59 || i === 61 ){
       sumInbound += inbound[i].inbound
       sumOutbound += outbound[i].outbound
       suminpktU += packetinU[i].pktsinu
@@ -440,8 +440,8 @@ function getMIB (nodeName, date, time) {
       time: time
     }
     setTimeout(() => {   
-      let inb =  inbound[60].inbound
-      let outb = outbound[60].outbound 
+      let inb =  inbound[59].inbound
+      let outb = outbound[59].outbound 
       let mainlinkData = {
         in: inb,
         out: outb
@@ -451,8 +451,8 @@ function getMIB (nodeName, date, time) {
 
     setTimeout(() => {
       let sumInterface = 0
-      for (let i = 60; i <= 62; i++) {
-        if(i === 60 || i === 62){
+      for (let i = 59; i <= 61; i++) {
+        if(i === 59 || i === 61){
         sumInterface += intSpd[i].intSpd/1048576
         }
       }
